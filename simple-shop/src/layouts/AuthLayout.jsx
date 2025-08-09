@@ -7,7 +7,7 @@ export default function AuthLayout() {
 
   // Jika tidak ada token, redirect ke login
   if (!accessToken) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/ss/login" replace />;
   }
 
   // Jika admin mencoba akses route customer, redirect ke admin
@@ -17,7 +17,7 @@ export default function AuthLayout() {
 
   // Jika bukan customer, redirect ke login
   if (role !== "customer") {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/ss/login" replace />;
   }
 
   return (
